@@ -9,7 +9,7 @@ $dbtype = 'mysql';
 $sv = 'localhost';
 $dbname = 'guestbook';
 $user = 'root';
-$pass = 'phppass10';
+$pass = '';
 // データベースに接続
 $dsn = "$dbtype:dbname=$dbname;host=$sv";
 $conn = new PDO($dsn, $user, $pass);

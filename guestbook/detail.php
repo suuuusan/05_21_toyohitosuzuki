@@ -11,13 +11,13 @@ $dbtype = 'mysql';
 $sv = 'localhost';
 $dbname = 'guestbook';
 $user = 'root';
-$pass = 'phppass10';
+$pass = '';
 // データベースに接続
 $dsn = "$dbtype:dbname=$dbname;host=$sv";
 $conn = new PDO($dsn, $user, $pass);
 
 //一件だけデータを取得する
-$sql = "SELECT * FROM message WHERE (m_id = :m_id);";
+$sql = "SELECT * FROM message1 WHERE (m_id = :m_id);";
 $stmt = $conn->prepare($sql);
 $stmt->bindParam(":m_id", $m_id);
 $stmt->execute();

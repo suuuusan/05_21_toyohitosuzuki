@@ -40,12 +40,12 @@
     $sv = 'localhost';
     $dbname = 'guestbook';
     $user = 'root';
-    $pass = 'phppass10';
+    $pass = '';
     // データベースに接続
     $dsn = "$dbtype:dbname=$dbname;host=$sv";
     $conn = new PDO($dsn, $user, $pass);
     // データの取得 DESCは大きいものから降順に並べる
-    $sql = "SELECT * FROM message ORDER BY m_id DESC";
+    $sql = "SELECT * FROM message1 ORDER BY m_id DESC";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
 

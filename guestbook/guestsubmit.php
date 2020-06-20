@@ -9,7 +9,7 @@ $dbtype = 'mysql';
 $sv = 'localhost';
 $dbname = 'guestbook';
 $user = 'root';
-$pass = 'phppass10';
+$pass = '';
 // データベースに接続
 $dsn = "$dbtype:dbname=$dbname;host=$sv";
 $conn = new PDO($dsn, $user, $pass);
@@ -20,7 +20,7 @@ $m_mail = htmlspecialchars($_SESSION["m_mail"], ENT_QUOTES, "UTF-8");
 $m_message = htmlspecialchars($_SESSION["m_message"], ENT_QUOTES, "UTF-8");
 
 // データの追加
-$sql = "INSERT INTO message (m_name, m_mail, m_message, m_dt)
+$sql = "INSERT INTO message1 (m_name, m_mail, m_message, m_dt)
         VALUES(:m_name, :m_mail, :m_message, NOW())";
 $stmt = $conn->prepare($sql);
 $stmt->bindParam(":m_name", $m_name);
